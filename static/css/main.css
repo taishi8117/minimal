@@ -1,3 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+@import url('https://fonts.googleapis.com/css?family=Lato|M+PLUS+1p|M+PLUS+Rounded+1c|Montserrat|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+
+
 html, body {
     height: 100%;
 }
@@ -23,18 +29,22 @@ img {
 /* Homepage */
 
 .intro {
+    color: var(--font-color);
     transform: translateY(22vh);
 }
 
 .intro > h1 {
-    color: #212121;
-    font-size: 12vh;
+    font-size: 10vh;
 }
 
 .intro > h2 {
-    color: #757575;
     font-size: 3vmin;
 }
+
+.intro > h3 {
+    font-size: 3vmin;
+}
+
 
 /* Page content */
 
@@ -58,6 +68,10 @@ a:link, a:visited {
 
 a.icon:hover {
     text-decoration: none;
+}
+
+.social-icons a {
+    color: var(--font-color);
 }
 
 a:hover {
@@ -100,7 +114,17 @@ a:hover {
 /* Colored borders at top/bottom of page */
 
 .navbar.navbar-default {
+    background-color: var(--navbar-background-color);
+    border-color: var(--border-color);
     border-top: var(--border-width) solid var(--accent);
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: var(--font-color);
+}
+
+.navbar-default .navbar-brand {
+    color: var(--font-color);
 }
 
 footer {
