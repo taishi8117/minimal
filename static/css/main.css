@@ -50,7 +50,10 @@ img {
 
 .content {
     padding-top: 20px;
-    font-size: 1.25em;
+    font-size: 1.35em;
+    /* 両端揃え 
+    text-align: justify;
+    text-justify: inter-ideograph;*/
 }
 
 /* Profile picture */
@@ -67,16 +70,51 @@ a:link, a:visited {
     color: var(--accent);
 }
 
+a:hover {
+    color: var(--accent) !important;
+}
+
 a.icon:hover {
     text-decoration: none;
 }
 
-.social-icons a {
-    color: var(--font-color);
+
+/* Link hover effects for content: https://codepen.io/P233/pen/EaGAl */
+
+.content a {
+  position: relative;
+  color: var(--accent);
+  text-decoration: none;
 }
 
-a:hover {
-    color: var(--accent) !important;
+.content a:before, .content a:after {
+  content: "";
+  position: absolute;
+  transition: transform 0.5s ease;
+}
+
+/* Following are taken from effect-1 */
+
+.content a {
+  padding-top: 10px;
+}
+
+.content a:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #bdc0ba;
+  transform: scaleX(0);
+}
+.content a:hover:before {
+  transform: scaleX(1.0);
+}
+
+/* Special behaviors for social icons */
+
+.social-icons a {
+    color: var(--font-color);
 }
 
 /* Copyright message */
